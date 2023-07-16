@@ -12,9 +12,9 @@ export interface HotelData {
     hotelName: string;
     city: string;
     address: string;
-    superiorPrice: string;
-    deluxePrice: string;
-    standardPrice: string;
+    superiorPrice: number;
+    deluxePrice: number;
+    standardPrice: number;
     superiorStock: number;
     deluxeStock: number;
     standardStock: number;

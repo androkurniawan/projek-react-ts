@@ -7,9 +7,9 @@ function Booking() {
         hotelName: '',
         city: '',
         address: '',
-        superiorPrice: '',
-        deluxePrice: '',
-        standardPrice: '',
+        superiorPrice: 0,
+        deluxePrice: 0,
+        standardPrice: 0,
         superiorStock: 0,
         deluxeStock: 0,
         standardStock: 0,
@@ -27,6 +27,11 @@ function Booking() {
     const checkout: string = localStorage.getItem('checkout') || '';
     const hotelId: string = localStorage.getItem('idSearching') || '';
     const navigate: NavigateFunction = useNavigate();
+
+    const totalPrice: number = (superiorAmount*+data.superiorPrice) + (deluxeAmount*+data.deluxePrice) + (standardAmount*+data.standardPrice)
+    const formattedNumber = (z: number) => {
+        return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(z);
+    };
 
     const fetchingData: () => void = () => {
         var myHeaders = new Headers();
@@ -164,7 +169,7 @@ function Booking() {
                                     <h4 className="my-0 fw-normal text-center">Superior Room</h4>
                                 </div>
                             <div className="card-body">
-                                <h1 className="card-title text-center pricing-card-title mb-3" id="superiorPrice">Rp {data.superiorPrice}<small className="text-muted fw-light" id="perNight1">/night</small></h1>
+                                <h1 className="card-title text-center pricing-card-title mb-3" id="superiorPrice">{formattedNumber(data.superiorPrice).slice(3, -3)},-<small className="text-muted fw-light" id="perNight1">/night</small></h1>
                                 <div className="text-center">
                                     <p>Facility:</p>
                                     <p id="superiorFacility">{data.superiorFacility}</p>
@@ -212,7 +217,7 @@ function Booking() {
                                     <h4 className="my-0 fw-normal text-center">Deluxe Room</h4>
                                 </div>
                                 <div className="card-body">
-                                    <h1 className="card-title pricing-card-title mb-3 text-center" id="deluxePrice">Rp {data.deluxePrice}<small className="text-muted fw-light">/night</small></h1>
+                                    <h1 className="card-title pricing-card-title mb-3 text-center" id="deluxePrice">Rp {formattedNumber(data.deluxePrice).slice(3, -3)},-<small className="text-muted fw-light">/night</small></h1>
                                     <div className="text-center">
                                     <p>Facility:</p>
                                     <p id="deluxeFacility">{data.deluxeFacility}</p>
@@ -259,7 +264,7 @@ function Booking() {
                                     <h4 className="my-0 fw-normal text-center">Standard Room</h4>
                                 </div>
                                 <div className="card-body">
-                                    <h1 className="card-title text-center pricing-card-title mb-3" id="standardPrice">Rp {data.standardPrice}<small className="text-muted fw-light">/night</small></h1>
+                                    <h1 className="card-title text-center pricing-card-title mb-3" id="standardPrice">Rp {formattedNumber(data.standardPrice).slice(3, -3)},-<small className="text-muted fw-light">/night</small></h1>
                                 <div className="text-center">
                                     <p>Facility:</p>
                                     <p id="standardFacility">{data.standardFacility}</p>
@@ -308,7 +313,7 @@ function Booking() {
 
             <div className="d-flex flex-row mb-3 container">
         <div className="p-2">
-            <h3>Total price: Rp {(superiorAmount*+data.superiorPrice) + (deluxeAmount*+data.deluxePrice) + (standardAmount*+data.standardPrice)},-</h3>
+            <h3>Total price: Rp {formattedNumber(totalPrice).slice(3, -3)},-</h3>
             
         </div>
     </div>

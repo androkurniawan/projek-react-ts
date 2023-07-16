@@ -8,6 +8,10 @@ function MyBooking() {
     const [booking, setBooking] = useState<Bookings[]>([]);
     const token: string = document.cookie;
 
+    const formattedNumber = (z: number) => {
+        return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(z);
+    };
+
     const fetchData: () => void = () => {
         let token = document.cookie;
         let splitToken = token.split(".");
@@ -103,7 +107,7 @@ function MyBooking() {
                         <p className='pt-2'>Superior: {y.amount_of_superior_room}<span id="superior"></span></p>
                         <p>Deluxe: {y.amount_of_deluxe_room}<span id="deluxe"></span></p>
                         <p>Standard: {y.amount_of_standard_room}<span id="standard"></span></p>
-                        <p>Total Price: Rp {y.total_price}<span id="totalPrice"></span></p>
+                        <p>Total Price: Rp {formattedNumber(y.total_price).slice(3, -3)},-<span id="totalPrice"></span></p>
                     </div>
                 </div>
 

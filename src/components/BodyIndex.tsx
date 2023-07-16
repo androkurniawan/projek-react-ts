@@ -149,66 +149,66 @@ function SearchingHotel() {
             
             </div>
 
-        <div className="container py-3 text-center">
-            <h2>Why Oracle</h2>
-            <div className="row">
-                <div className="col-lg-10 mx-auto">
-                    <div className="row">
-                        <div className="col-md-3">
-                            <img className="py-3" width="200em" src={whyOracle1} alt="" />
-                            <h4>Ease of Payment</h4>
-                            <p>Choose your preferred payment method (transfers, credit cards, self-service payments, internet banking, and installments).</p>
-                        </div>
-                        <div className="col-md-3">
-                            <img className="py-3" width="200em" src={whyOracle2} alt=""/>
-                            <h4>Discounts & Promos</h4>
-                            <p>Enjoy special prices for Oracle members and also get a variety of other interesting promos.</p>
-                        </div>
-                        <div className="col-md-3">
-                            <img className="py-3" width="200em" src={whyOracle3} alt="" />
-                            <h4>OraclePoint</h4>
-                            <p>Collect OraclePoin from your transactions and use it as a discount on the next transaction.</p>
-                        </div>
-                        <div className="col-md-3">
-                            <img className="py-3" width="200em" src={whyOracle4} alt="" />
-                            <h4>Best Price Guarantee</h4>
-                            <p>Oracle guarantees you the best price when placing an order.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <section id="review" className="main-biru">
-            <div className="container-fluid py-3 text-center">
-                <h2>Trusted by more than a million people</h2>
-                <p>Oracle is one of the best hotel reservation app</p>
+            <div className="container py-3 text-center">
+                <h2>Why Oracle</h2>
                 <div className="row">
-                    <div className="col-lg-8 mx-auto">
+                    <div className="col-lg-10 mx-auto">
                         <div className="row">
-                            <div className="col-md-4">
-                                <h3>99.99%</h3>
-                                <p>Satisfaction</p>
+                            <div className="col-md-3">
+                                <img className="py-3" width="200em" src={whyOracle1} alt="" />
+                                <h4>Ease of Payment</h4>
+                                <p>Choose your preferred payment method (transfers, credit cards, self-service payments, internet banking, and installments).</p>
                             </div>
-                            <div className="col-md-4">
-                                <h3>20K</h3>
-                                <p>Users/day</p>
+                            <div className="col-md-3">
+                                <img className="py-3" width="200em" src={whyOracle2} alt=""/>
+                                <h4>Discounts & Promos</h4>
+                                <p>Enjoy special prices for Oracle members and also get a variety of other interesting promos.</p>
                             </div>
-                            <div className="col-md-4">
-                                <h3>36.000</h3>
-                                <p>Revervation/year</p>
+                            <div className="col-md-3">
+                                <img className="py-3" width="200em" src={whyOracle3} alt="" />
+                                <h4>OraclePoint</h4>
+                                <p>Collect OraclePoin from your transactions and use it as a discount on the next transaction.</p>
+                            </div>
+                            <div className="col-md-3">
+                                <img className="py-3" width="200em" src={whyOracle4} alt="" />
+                                <h4>Best Price Guarantee</h4>
+                                <p>Oracle guarantees you the best price when placing an order.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <MostVisitedHotels />
+            <section id="review" className="main-biru">
+                <div className="container-fluid py-3 text-center">
+                    <h2>Trusted by more than a million people</h2>
+                    <p>Oracle is one of the best hotel reservation app</p>
+                    <div className="row">
+                        <div className="col-lg-8 mx-auto">
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <h3>99.99%</h3>
+                                    <p>Satisfaction</p>
+                                </div>
+                                <div className="col-md-4">
+                                    <h3>20K</h3>
+                                    <p>Users/day</p>
+                                </div>
+                                <div className="col-md-4">
+                                    <h3>36.000</h3>
+                                    <p>Revervation/year</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <TopUsers />
+            <MostVisitedHotels />
 
-        <HighestRatedHotel />
+            <TopUsers />
+
+            <HighestRatedHotel />
 
         </section>
 

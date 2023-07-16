@@ -90,21 +90,15 @@ const updateProfile = () => {
 }
   
   const handleName = (e: ChangeEvent<HTMLInputElement>) => {
-    // if (e && e.currentTarget) {
     setResultX(previousResultX => ({...previousResultX, name: e.target.value}))
-    // }
   }
 
   const handleEmail = (e: ChangeEvent<HTMLInputElement>) => {
-    // if (e && e.currentTarget) {
     setResultX(previousResultX => ({...previousResultX, email: e.target.value}))
-    // }
   }
 
   const handlePhone = (e: ChangeEvent<HTMLInputElement>) => {
-    // if (e && e.currentTarget) {
     setResultX(previousResultX => ({...previousResultX, phone: e.target.value}))
-    // }
   }
 
   return (
